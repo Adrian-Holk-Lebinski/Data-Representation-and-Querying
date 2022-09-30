@@ -18,5 +18,5 @@ class Cars extends Vehicle{
         console.log(`Doors: ${this.doors}`);
     }
 }
-car = new Cars("Toyota", "Corolla", 2006, 4);
+var car = new Cars("Toyota", "Corolla", 2006, 4);
 car.Information();
