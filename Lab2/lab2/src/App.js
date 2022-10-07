@@ -1,0 +1,49 @@
+import './App.css';
+
+import React from 'react';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import Content from './components/Content';
+
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes
+} from "react-router-dom";
+
+class App extends React.Component {
+  render() {
+    return (
+      <div className="App">
+        {/*Navbar */}
+        <Router>
+          <Navbar bg="dark" variant="dark">
+            <Container>
+              <Navbar.Brand href="/">Navbar</Navbar.Brand>
+              <Nav className="me-auto">
+                <Nav.Link href="/">Home</Nav.Link>
+                <Nav.Link href="/header">Read</Nav.Link>
+                <Nav.Link href="/footer">Create</Nav.Link>
+              </Nav>
+            </Container>
+          </Navbar>
+          <br />
+
+          <Routes>
+            <Route path='/' element={<Content />}></Route>
+            <Route path="/header" element={<Header></Header>}></Route>
+            <Route path="/footer" element={<Footer></Footer>}></Route>
+          </Routes>
+        </Router>
+      </div>
+    );
+
+  }
+
+}
+
+export default App;
