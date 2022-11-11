@@ -24,6 +24,7 @@ app.get("/", (req, res) => {
     res.send("Hello World!")
 })
 
+//store json data for books (acts as an API)
 app.get("/api/books", (req, res) => {
     const books = [
         {

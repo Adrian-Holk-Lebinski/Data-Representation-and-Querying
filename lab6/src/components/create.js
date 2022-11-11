@@ -23,15 +23,17 @@ export class Create extends React.Component {
         e.preventDefault();
         console.log(`${this.state.title}, ${this.state.cover}, ${this.state.author}, ${this.state.Url} `)
 
+        //create a book object and pass data to it
         const book = {
             title: this.state.title,
             cover: this.state.cover,
             author: this.state.author
         }
 
-axios.post('http://localhost:4000/api/books', book)
-.then()
-.catch();
+        //post the book data back to server
+        axios.post('http://localhost:4000/api/books', book)
+            .then()
+            .catch();
 
         //reset form
         this.setState({
