@@ -49,7 +49,7 @@ export function Edit(props) {
         <div>
             <form onSubmit={handleSubmit}>
                 <div className="form-group">
-                    <label>Add Book Title: </label>
+                    <label>Edit Title: </label>
                     <input type="text"
                         className="form-control"
                         value={title}
@@ -65,7 +65,7 @@ export function Edit(props) {
                     />
                 </div>
                 <div className="form-group">
-                    <label>Add Poster Url: </label>
+                    <label>Edit Author: </label>
                     <input type="text"
                         className="form-control"
                         value={author}

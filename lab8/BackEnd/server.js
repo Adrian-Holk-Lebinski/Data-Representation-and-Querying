@@ -58,7 +58,7 @@ app.get("/api/books", (req, res) => {
 //get id 
 app.get("/api/books/:id", (req, res) => {
     console.log(req.params.id)
-    bookModel.findById(req.params.id, (error, data) =>  {
+    bookModel.findById(req.params.id, (error, data) => {
         res.json(data);
     });
 })
@@ -70,23 +70,16 @@ app.get("/edit/:id", (req, res) => {
 })
 
 //response with new book
-app.put('/api/books/:id',(req, res)=>{
- 
-    console.log("Update: "+req.params.id);
+app.put('/api/books/:id', (req, res) => {
+
+    console.log("Update: " + req.params.id);
     console.log(req.body);
-    
-    bookModel.findByIdAndUpdate(req.params.id,req.body,{new:true},
-      (error,data)=>{
-        res.send(data);
-      })
-  })
-   
-  app.get('/api/books/:id', (req, res)=>{
-    console.log(req.params.id);
-    bookModel.findById(req.params.id,(error,data)=>{
-      res.json(data);
-    })
-  })
+
+    bookModel.findByIdAndUpdate(req.params.id, req.body, { new: true },
+        (error, data) => {
+            res.send(data);
+        })
+})
 
 //listening to port
 app.listen(port, () => {

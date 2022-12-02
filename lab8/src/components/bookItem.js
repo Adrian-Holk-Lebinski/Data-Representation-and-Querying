@@ -13,6 +13,7 @@ class BookItem extends React.Component {
                         <Card.Title>{this.props.book.author}</Card.Title>
                         <Card.Img src={this.props.book.cover} className="Book-img"/>
                     </Card.Body>
+                    {/* Link to the edit page and pass ID of book with it */}
                     <Link to={'/edit/' + this.props.book._id} className = "btn btn-primary">Edit</Link>
                 </Card>
                 <br/>
